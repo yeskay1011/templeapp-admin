@@ -71,7 +71,7 @@ const SwipeableEdgeDrawer = ({
           navigate("/success", { state: { result, formData, totalPrice } });
         }
       } catch (error) {
-        console.log("something went wrong", error);
+        console.log("something went wrong-", error);
       }
     } else {
       toast.error(

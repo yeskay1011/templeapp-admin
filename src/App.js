@@ -6,6 +6,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import AddServices from "./Components/Services/AddServices";
 import ServiceList from "./Components/Services/ServiceList";
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (

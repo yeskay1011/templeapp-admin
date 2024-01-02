@@ -9,6 +9,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../Auth/auth";
+import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,7 +21,10 @@ const Login = () => {
     try {
       const loggedInUser = await loginUser({ email, password });
       console.log("Login successful:", loggedInUser);
-      navigate("/dashboard");
+      toast.success("Login successful!");
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 1000);
     } catch (error) {
       console.error("Login error:", error.message);
       navigate("/");
@@ -90,6 +94,7 @@ const Login = () => {
           <br />
         </Box>
       </div>
+      <ToastContainer />
     </div>
   );
 };
